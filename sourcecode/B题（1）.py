@@ -27,7 +27,7 @@ def Danger_Caculate(coldness, a, b):
     elif a < coldness < (a + b) / 2:
         mu = 2 * ((coldness - a) / (b - a)) ** 2
     elif (a + b) / 2 <= coldness < b:
-        mu = 1 - 2 * ((coldness - a) / (b - a)) ** 2
+        mu = 1 - 2 * ((coldness - b) / (b - a)) ** 2   #!!!注意和上面一个公式的区别
     else:
         mu = 1
     return mu
